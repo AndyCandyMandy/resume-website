@@ -1,0 +1,14 @@
+.landingBody {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingHeader {
+  text-align: center; 
+  font-size: clamp(1.5rem, 4vw, 3rem);
+
+  padding: 25vh 5vw; 
+}
