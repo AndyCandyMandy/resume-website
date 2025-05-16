@@ -2,6 +2,9 @@ function App() {
   return ( 
     <div> 
         <header className="headerSection"> 
+            <p>Profile</p> 
+            <p>Projects</p> 
+            <p>Contacts</p>
 
         </header>
         <main className="landingBody"> 
