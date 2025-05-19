@@ -40,10 +40,39 @@
   top: 0;
   left: 0;
   position: fixed;
-  height: 100px;
+  height: clamp(2.25rem, 10vh, 4rem); 
   width: 100%; 
 
   background-color: #121212;
+  color: white;
 
-  align-content: space-around;
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end;
+} 
+
+.homeBody {
+  background-color: #1b1c1a;
+
+  margin: 0;
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center; 
+}
+
+.headerBtn {
+  color: white;
+  padding: 0 20px;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+} 
+
+.headerBtn:hover {
+  color: #ffc400;
+}
+
+.profileBody, .projectBody, .contactBody {
+  color: white;
 }
