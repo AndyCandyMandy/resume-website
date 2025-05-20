@@ -81,12 +81,29 @@
 } 
 
 .profileContent {
-  display: flex;
+  display: flex; 
+  flex-direction: column;
   align-items: center; 
-  justify-content: stretch;
+  justify-content: center; 
+  gap: 1rem;
 }
 
 .projectContent { 
   background-color: #ffc400;
   border-radius: 10px;
+}  
+
+.footerSection { 
+  background-color: #121212;
+  color: white;
+
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+  .profileContent {
+    flex-direction: row; 
+  }
 }
