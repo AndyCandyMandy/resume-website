@@ -23,7 +23,8 @@
   border: 1px solid #1b1c1a; 
   margin: 10px;
   padding: 15px; 
-  border-radius: 10px;
+  border-radius: 10px; 
+  cursor: pointer;
 
   color: #1b1c1a; 
   font-family: "Roboto Condensed", sans-serif; 
@@ -67,7 +68,8 @@
 .headerBtn {
   color: white;
   padding: 0 20px;
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem); 
+  cursor: pointer;
 } 
 
 .headerBtn:hover {
@@ -90,6 +92,7 @@
 
 .projectContent { 
   background-color: #ffc400;
+  color: white;
   border-radius: 10px; 
   margin: 0 0 10px 0;
 }   
@@ -102,7 +105,9 @@
   margin: 0 10px 10px 10px;
 }
 
-.contactContent {
+.contactContent { 
+  margin: 0 0 20px 0;
+
   display: flex;
   flex-direction: column;  
   align-items: center;
@@ -110,24 +115,45 @@
 } 
 
 .contactInput {
+  background-color: #2c2e2b; 
+  color: white;
   width: clamp(30vw, 45vw, 55vw);
   
   box-sizing: border-box;
   margin-bottom: 10px;
 }
 
-.contactMessage {
+.contactMessage { 
+  background-color: #2c2e2b; 
+  color: white;
   width: clamp(30vw, 45vw, 55vw);
   height: clamp(5vh, 10vh , 15vh);
 
   resize: none;
   box-sizing: border-box; 
   margin-bottom: 10px;
+} 
+
+.contactSubmitBtn {
+  background-color: #121212; 
+  color: white; 
+  border: 1px solid #ffc400;  
+  padding: 15px;
+
+  cursor: pointer;
+}
+
+.scrollBtn {
+  background-color: #ffc400;
+  color: white; 
+
+  cursor: pointer;
 }
 
 .footerSection { 
   background-color: #121212;
-  color: white;
+  color: white; 
+  height: clamp(3rem, 15vh, 6rem); 
 
   display: flex;
   align-items: center; 

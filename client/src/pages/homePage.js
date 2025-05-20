@@ -1,4 +1,12 @@
 function App() {
+
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
   return ( 
     <div> 
         <header className="headerSection"> 
@@ -52,12 +60,12 @@ function App() {
               <input className="contactInput" type="text" placeholder="Enter Name"/> 
               <input className="contactInput" type="text" placeholder="Enter Email"/> 
               <textarea className="contactMessage" type="text" placeholder="Enter Message"/> 
-              <button type="submit">Submit</button>
+              <button className="contactSubmitBtn" type="submit">Submit</button>
             </form>
 
           </section>
 
-          <button>^</button>
+          <button className="scrollBtn" onClick={scrollTop}>^</button>
         </main> 
         <footer className="footerSection"> 
           <button>github</button> 
