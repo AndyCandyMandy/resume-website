@@ -46,13 +46,19 @@ function App() {
           </section> 
 
           <section className="contactBody">
-            <h1>Contact Me</h1>
+            <h1>Contact Me</h1> 
+
+            <div className="contactContent">
+
+            </div>
 
           </section>
 
 
         </main> 
-        <footer className="footSection">
+        <footer className="footerSection"> 
+          <button>github</button> 
+          <button>linkdon</button>
 
         </footer>
     </div>
