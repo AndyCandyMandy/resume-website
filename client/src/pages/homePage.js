@@ -48,7 +48,10 @@ function App() {
           <section className="contactBody">
             <h1>Contact Me</h1> 
 
-            <div className="contactContent">
+            <div className="contactContent"> 
+              <input type="text" placeholder="Enter Name"/> 
+              <input type="text" placeholder="Enter Email"/> 
+              <input type="text" placeholder="Enter Message"/>
 
             </div>
 
