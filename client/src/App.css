@@ -36,7 +36,7 @@
   background-color: #574610; 
 } 
 
-/* CSS Elements intented for the home page */
+/* CSS Elements intented for the home page ------------------------------------------------------------------------*/
 .headerSection {
   top: 0;
   left: 0;
@@ -94,7 +94,7 @@
   background-color: #ffc400;
   color: white;
   border-radius: 10px; 
-  margin: 0 0 10px 0;
+  margin: 0 0 10px 0; 
 }   
 
 .projectHeader {
@@ -168,4 +168,28 @@
   .profileContent {
     flex-direction: row; 
   } 
+} 
+
+/* CSS Elements for the carousel ------------------------------------------------------------------------*/ 
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  } 
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+.toolCarousel {
+  white-space: nowrap;
+} 
+
+.logoCarousel {
+  max-width: 7%;
+  height: auto; 
+  overflow: hidden;
+
+  margin: 5px;
+
+  animation: 5s slide infinite linear;
 }
