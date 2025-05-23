@@ -27,7 +27,7 @@ function App() {
             </div> 
           </section>
 
-          <h3 className="titleCarousel">My tools and languages for development!</h3>
+          <h3 className="titleCarousel">My tools and languages for web development!</h3>
           <div className="displayCarousel"> 
             
             <div className="trackCarousel">
@@ -67,8 +67,8 @@ function App() {
               <p className="projectDescription">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
               </p> 
-              <button>About</button> 
-              <button>Project</button>
+              <button className="projectBtn">About</button> 
+              <button className="projectBtn">Project</button>
             </div>
 
             <div className="projectContent">
@@ -77,8 +77,8 @@ function App() {
               <p className="projectDescription"> 
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
               </p> 
-              <button>About</button> 
-              <button>Project</button>
+              <button className="projectBtn">About</button> 
+              <button className="projectBtn">Project</button>
             </div> 
 
             <div className="projectContent">
@@ -87,8 +87,8 @@ function App() {
               <p className="projectDescription">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
               </p> 
-              <button>About</button> 
-              <button>Project</button>
+              <button className="projectBtn">About</button> 
+              <button className="projectBtn">Project</button>
             </div>
           
           </section> 
@@ -97,7 +97,7 @@ function App() {
             <h1 style={{ textAlign: "center" }}>Contact Me</h1> 
 
             <form className="contactContent" >  
-              <p>If you have any questions or inquiries regarding my work, please don't hesitate to contact me.</p>
+              <p>If you have any questions or inquiries regarding my work, please don't hesitate to reach out to me.</p>
               <input className="contactInput" type="text" placeholder="Enter Name"/> 
               <input className="contactInput" type="text" placeholder="Enter Email"/> 
               <textarea className="contactMessage" type="text" placeholder="Enter Message"/> 

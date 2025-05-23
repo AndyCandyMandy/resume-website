@@ -67,7 +67,8 @@
 }
 
 .headerBtn {
-  color: white;
+  color: white; 
+  font-family: "Roboto", sans-serif;
   padding: 0 20px;
   font-size: clamp(1.25rem, 2vw, 1.5rem); 
   cursor: pointer;
@@ -82,6 +83,23 @@
   overflow-x: hidden;
   padding: 0 5vw;
 } 
+
+.profileBody h1, .projectBody h1, .contactBody h1  {
+  font-family: "Roboto Condensed", sans-serif; 
+  font-size: clamp(2rem, 5vw, 3rem); 
+
+  text-align: center;
+}
+
+.profileBody p, .projectBody p, .contactBody p  {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
+}
+
+h3 {
+   font-family: "Roboto Condensed", sans-serif; 
+   font-size: clamp(1.5rem, 2vw, 2.25rem); 
+}
 
 .profileContent {
   display: flex; 
@@ -104,6 +122,18 @@
 
 .projectDescription {
   margin: 0 10px 10px 10px;
+} 
+
+.projectBtn {
+  background: #1b1c1a; 
+  border: 1px solid #1b1c1a; 
+  margin: 5px; 
+  border-radius: 10px; 
+  cursor: pointer;
+
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
 }
 
 .contactContent { 
@@ -118,26 +148,38 @@
 .contactInput {
   background-color: #2c2e2b; 
   color: white;
-  width: clamp(30vw, 45vw, 55vw);
-  
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
+  width: clamp(30vw, 45vw, 60vw);
+
+  border: 1px solid #1b1c1a; 
+  caret-color: #ffc400; 
+  outline-color: none;
   box-sizing: border-box;
   margin-bottom: 10px;
 }
 
 .contactMessage { 
   background-color: #2c2e2b; 
-  color: white;
+  color: white; 
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
   width: clamp(30vw, 45vw, 55vw);
   height: clamp(5vh, 10vh , 15vh);
 
-  resize: none;
+  border: 1px solid #1b1c1a;
+  caret-color: #ffc400; 
+  outline-color: none;
+  resize: vertical;
   box-sizing: border-box; 
   margin-bottom: 10px;
 } 
 
 .contactSubmitBtn {
   background-color: #121212; 
-  color: white; 
+  color: white;  
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
   border: 1px solid #ffc400;  
   padding: 15px;
 
@@ -147,6 +189,8 @@
 .scrollBtn {
   background-color: #ffc400;
   color: white; 
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
 
   cursor: pointer;
 }
@@ -161,7 +205,12 @@
   justify-content: center;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {  
+
+  .profileBody h1, .projectBody h1 {
+    text-align: start;
+  }
+
   .headerSection {
     justify-content: flex-end;
   }
