@@ -40,7 +40,8 @@
 .headerSection {
   top: 0;
   left: 0;
-  position: fixed;
+  position: fixed; 
+  z-index: 1000;
   height: clamp(2.25rem, 10vh, 4rem); 
   width: 100%; 
 
@@ -78,7 +79,7 @@
 
 .profileBody, .projectBody, .contactBody {
   color: white;
-
+  overflow-x: hidden;
   padding: 0 5vw;
 } 
 
@@ -167,29 +168,42 @@
 
   .profileContent {
     flex-direction: row; 
-  } 
+  }  
+
 } 
 
 /* CSS Elements for the carousel ------------------------------------------------------------------------*/ 
-@keyframes slide {
+@keyframes leftSlide {
   0% {
     transform: translateX(0);
   } 
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-100%);
   }
+} 
+
+.titleCarousel {
+  color: white; 
 }
 
-.toolCarousel {
-  white-space: nowrap;
+.displayCarousel {
+  width: 60vw;
+  padding: 1rem 0;
+
+  white-space: nowrap; 
+  overflow-x: hidden;
+}
+
+.trackCarousel { 
+  display: inline-block;
+  gap: 1rem;
+
+  animation: leftSlide 10s linear infinite;
 } 
 
 .logoCarousel {
-  max-width: 7%;
-  height: auto; 
-  overflow: hidden;
-
+  width: clamp(90px, 7vw, 30px); 
+  height: auto;  
+  
   margin: 5px;
-
-  animation: 5s slide infinite linear;
-}
+}  
