@@ -1,4 +1,18 @@
-function App() {
+import { useInView } from "react-intersection-observer";
+
+function App() { 
+  const { ref: profileRef, inView: profileInView} = useInView({
+    /* Optional options */
+    threshold: 0,
+  });  
+  const { ref: projectRef, inView: projectInView} = useInView({
+    /* Optional options */
+    threshold: 0,
+  });  
+  const { ref: contactRef, inView: contactInView} = useInView({
+    /* Optional options */
+    threshold: 0,
+  }); 
 
   const scrollTop = () => {
     window.scrollTo({
@@ -9,15 +23,15 @@ function App() {
 
   return ( 
     <div> 
-        <header className="headerSection"> 
-            <p className="headerBtn">Profile</p> 
-            <p className="headerBtn">Projects</p> 
-            <p className="headerBtn">Contacts</p>
+        <header className="headerSection">  
+            <p className={`headerBtn ${profileInView ? 'inViewport' : ''}`}>Profile</p>
+            <p className={`headerBtn ${projectInView ? 'inViewport' : ''}`}>Projects</p> 
+            <p className={`headerBtn ${contactInView ? 'inViewport' : ''}`}>Contacts</p>
         </header>
         <main className="homeBody"> 
 
 
-          <section className="profileBody">
+          <section className="profileBody" ref={profileRef}>
             <h1>Who is <span style={{ color: "#ffc400" }}>Andy Giang</span>?</h1>
             <div className="profileContent">
               <img src="/logo512.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
@@ -58,7 +72,7 @@ function App() {
             </div> 
           </div>
 
-          <section className="projectBody">
+          <section className="projectBody" ref={projectRef}>
             <h1>Projects</h1>
 
             <div className="projectContent">
@@ -93,7 +107,7 @@ function App() {
           
           </section> 
 
-          <section className="contactBody">
+          <section className="contactBody" ref={contactRef}>
             <h1 style={{ textAlign: "center" }}>Contact Me</h1> 
 
             <form className="contactContent" >  

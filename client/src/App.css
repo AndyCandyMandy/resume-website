@@ -76,6 +76,10 @@
 
 .headerBtn:hover {
   color: #ffc400;
+} 
+
+.headerBtn.inViewport {
+  color: #ffc400;
 }
 
 .profileBody, .projectBody, .contactBody {
