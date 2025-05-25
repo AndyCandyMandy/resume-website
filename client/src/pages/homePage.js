@@ -14,24 +14,36 @@ function App() {
     threshold: 0,
   }); 
 
-  const scrollTop = () => {
+  const scrollTopBtn = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth"
+    });
+  }
+
+  const scrollSectionBtn = (id) => { 
+    const element = document.getElementById(id); 
+    const header = document.getElementById("headerId");
+
+    const headerOffset = (element.getBoundingClientRect().top + window.pageYOffset) - header.offsetHeight;
+
+    window.scrollTo({ 
+      top: headerOffset, 
+      behavior: "smooth"
     });
   }
 
   return ( 
     <div> 
-        <header className="headerSection">  
-            <p className={`headerBtn ${profileInView ? 'inViewport' : ''}`}>Profile</p>
-            <p className={`headerBtn ${projectInView ? 'inViewport' : ''}`}>Projects</p> 
-            <p className={`headerBtn ${contactInView ? 'inViewport' : ''}`}>Contacts</p>
+        <header className="headerSection" id="headerId">  
+            <p className={`headerBtn ${profileInView ? "inViewport" : ""}`} onClick={() => scrollSectionBtn("profileId")}>Profile</p>
+            <p className={`headerBtn ${projectInView ? "inViewport" : ""}`} onClick={() => scrollSectionBtn("projectId")}>Projects</p> 
+            <p className={`headerBtn ${contactInView ? "inViewport" : ""}`} onClick={() => scrollSectionBtn("contactId")}>Contacts</p>
         </header>
         <main className="homeBody"> 
 
 
-          <section className="profileBody" ref={profileRef}>
+          <section className="profileBody" id="profileId" ref={profileRef}>
             <h1>Who is <span style={{ color: "#ffc400" }}>Andy Giang</span>?</h1>
             <div className="profileContent">
               <img src="/logo512.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
@@ -72,7 +84,7 @@ function App() {
             </div> 
           </div>
 
-          <section className="projectBody" ref={projectRef}>
+          <section className="projectBody" id="projectId" ref={projectRef}>
             <h1>Projects</h1>
 
             <div className="projectContent">
@@ -107,7 +119,7 @@ function App() {
           
           </section> 
 
-          <section className="contactBody" ref={contactRef}>
+          <section className="contactBody" id="contactId" ref={contactRef}>
             <h1 style={{ textAlign: "center" }}>Contact Me</h1> 
 
             <form className="contactContent" >  
@@ -120,7 +132,7 @@ function App() {
 
           </section>
 
-          <button className="scrollBtn" onClick={scrollTop}>^</button>
+          <button className="scrollBtn" onClick={scrollTopBtn}>^</button>
         </main> 
         <footer className="footerSection"> 
           <i class="devicon-github-original" style={{ fontSize: "50px" }}></i>
