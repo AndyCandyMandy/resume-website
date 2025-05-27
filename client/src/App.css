@@ -1,3 +1,7 @@
+body {
+  background-color: #1b1c1a;
+}
+
 /* CSS Elements intented for the landing page */
 .landingBody {
   background-color: #1b1c1a;
@@ -50,8 +54,9 @@
 
   display: flex;
   align-items: center; 
-  justify-content: center;
+  justify-content: center; 
 } 
+
 
 .homeBody {
   background-color: #1b1c1a;
@@ -71,23 +76,18 @@
   font-family: "Roboto", sans-serif;
   padding: 0 20px;
   font-size: clamp(1.25rem, 2vw, 1.5rem); 
-  cursor: pointer;
+  cursor: pointer; 
 } 
 
 .headerBtn:hover {
   color: #ffc400;
 } 
 
-.headerBtn.inViewport {
-  color: #ffc400;
-}
 
 .profileBody, .projectBody, .contactBody {
   color: white;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 0 5vw;
-
-  animation: fadeUp 1s;
 } 
 
 .profileBody h1, .projectBody h1, .contactBody h1  {
@@ -102,17 +102,25 @@
   font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
 } 
 
-@keyframes fadeUp { 
+@keyframes fadeUp {
   0% {
-    opacity: 0; 
-    transform: translateY(30px) scale(0.9)
-
-  } 
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(30px);
+  }
   100% {
     opacity: 1; 
-    transform: translateY(0px) scale(1)
+    filter: blur(0);
+    transform: translateY(0);
   }
+}
 
+.hiddenElement {
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: fadeUp 0.5s ease-out forwards;
 }
 
 h3 {
@@ -125,7 +133,7 @@ h3 {
   flex-direction: column;
   align-items: center; 
   justify-content: center; 
-  gap: 1rem;
+  gap: 1rem;  
 }
 
 .projectContent { 
@@ -259,7 +267,7 @@ h3 {
   padding: 1rem 0;
 
   white-space: nowrap; 
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 .trackCarousel { 

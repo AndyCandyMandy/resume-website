@@ -1,18 +1,10 @@
 import { useInView } from "react-intersection-observer";
 
 function App() { 
-  const { ref: profileRef, inView: profileInView} = useInView({
-    /* Optional options */
-    threshold: 0,
-  });  
-  const { ref: projectRef, inView: projectInView} = useInView({
-    /* Optional options */
-    threshold: 0,
-  });  
-  const { ref: contactRef, inView: contactInView} = useInView({
-    /* Optional options */
-    threshold: 0,
-  });  
+  
+  const { ref: profileRef, inView: profileInView} = useInView({ threshold: 0.3, triggerOnce: true });  
+  const { ref: projectRef, inView: projectInView} = useInView({ threshold: 0.3, triggerOnce: true });  
+  const { ref: contactRef, inView: contactInView} = useInView({ threshold: 0.3, triggerOnce: true });  
 
   const scrollTopBtn = () => {
     window.scrollTo({
@@ -36,16 +28,16 @@ function App() {
   return ( 
     <div> 
         <header className="headerSection" id="headerId">  
-            <p className={`headerBtn ${profileInView ? "inViewport" : ""}`} onClick={() => scrollSectionBtn("profileId")}>Profile</p>
-            <p className={`headerBtn ${projectInView ? "inViewport" : ""}`} onClick={() => scrollSectionBtn("projectId")}>Projects</p> 
-            <p className={`headerBtn ${contactInView ? "inViewport" : ""}`} onClick={() => scrollSectionBtn("contactId")}>Contacts</p>
+            <p className="headerBtn" onClick={() => scrollSectionBtn("profileId")}>Profile</p>
+            <p className="headerBtn" onClick={() => scrollSectionBtn("projectId")}>Projects</p> 
+            <p className="headerBtn" onClick={() => scrollSectionBtn("contactId")}>Contacts</p>
         </header>
         <main className="homeBody"> 
 
 
           <section className="profileBody" id="profileId" ref={profileRef}>
-            <h1>Who is <span style={{ color: "#ffc400" }}>Andy Giang</span>?</h1>
-            <div className="profileContent">
+            <h1 className={`hiddenElement ${profileInView ? "fadeIn" : ""}`}>Who is <span style={{ color: "#ffc400" }}>Andy Giang</span>?</h1>
+            <div className={`profileContent hiddenElement ${profileInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>
               <img src="/logo512.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
@@ -53,8 +45,9 @@ function App() {
             </div> 
           </section>
 
-          <h3 className="titleCarousel">My tools and languages for web development!</h3>
-          <div className="displayCarousel"> 
+          
+          <h3 className={`titleCarousel hiddenElement ${profileInView ? "fadeIn" : ""}`}>My tools and languages for web development!</h3>
+          <section className={`displayCarousel hiddenElement ${profileInView ? "fadeIn" : ""}`}> 
             
             <div className="trackCarousel">
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt=""/> 
@@ -68,7 +61,7 @@ function App() {
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt=""/> 
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/couchdb/couchdb-original-wordmark.svg" alt=""/> 
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg" alt=""/> 
-            </div> 
+            </div>  
             <div className="trackCarousel">
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt=""/> 
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" alt=""/> 
@@ -82,12 +75,14 @@ function App() {
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/couchdb/couchdb-original-wordmark.svg" alt=""/> 
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg" alt=""/> 
             </div> 
-          </div>
+            
+          </section>
+          
 
           <section className="projectBody" id="projectId" ref={projectRef}>
-            <h1>Projects</h1>
+            <h1 className={`hiddenElement ${projectInView ? "fadeIn" : ""}`}>Projects</h1>
 
-            <div className="projectContent">
+            <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>
               <h3 className="projectHeader">Project #1</h3> 
               <img src="/logo192.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
               <p className="projectDescription">
@@ -97,7 +92,7 @@ function App() {
               <button className="projectBtn">Project</button>
             </div>
 
-            <div className="projectContent">
+            <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>
               <h3 className="projectHeader">Project #2</h3> 
               <img src="/logo192.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
               <p className="projectDescription"> 
@@ -107,7 +102,7 @@ function App() {
               <button className="projectBtn">Project</button>
             </div> 
 
-            <div className="projectContent">
+            <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>
               <h3 className="projectHeader">Project #3</h3> 
               <img src="/logo192.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
               <p className="projectDescription">
@@ -120,9 +115,9 @@ function App() {
           </section> 
 
           <section className="contactBody" id="contactId" ref={contactRef}>
-            <h1 style={{ textAlign: "center" }}>Contact Me</h1> 
+            <h1 className={`hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ textAlign: "center", animationDelay: "0.2s" }}>Contact Me</h1> 
 
-            <form className="contactContent" >  
+            <form className={`contactContent hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>  
               <p>If you have any questions or inquiries regarding my work, please don't hesitate to reach out to me.</p>
               <input className="contactInput" type="text" placeholder="Enter Name"/> 
               <input className="contactInput" type="text" placeholder="Enter Email"/> 
