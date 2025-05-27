@@ -12,7 +12,7 @@ function App() {
   const { ref: contactRef, inView: contactInView} = useInView({
     /* Optional options */
     threshold: 0,
-  }); 
+  });  
 
   const scrollTopBtn = () => {
     window.scrollTo({
@@ -31,7 +31,7 @@ function App() {
       top: headerOffset, 
       behavior: "smooth"
     });
-  }
+  } 
 
   return ( 
     <div> 
