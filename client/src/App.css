@@ -140,15 +140,37 @@ h3 {
   background-color: #ffc400;
   color: white;
   border-radius: 10px; 
-  margin: 0 0 10px 0; 
+  margin: 0 0 10px 0;  
+
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  gap: 1rem; 
 }   
 
 .projectHeader {
   margin: 0 0 0 10px;
 } 
 
+.projectRespBox {
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  gap: 1rem;  
+} 
+
+.projectImage {
+  height: auto;
+  width: clamp(20rem, 40vw, 50rem); 
+  margin: 20px auto; 
+  max-width: 100%; 
+  display: block;
+}
+
 .projectDescription {
-  margin: 0 10px 10px 10px;
+  margin: 0 10px 10px 10px; 
 } 
 
 .projectBtn {
@@ -161,6 +183,11 @@ h3 {
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
+  text-decoration: none;
+}
+
+.projectBtn:hover { 
+  background: #574610; 
 }
 
 .contactContent { 
@@ -245,6 +272,14 @@ h3 {
   .profileContent {
     flex-direction: row; 
   }  
+
+  .projectContent {
+    flex-direction: row;
+  }
+
+  .projectRespBox {
+    flex-direction: row; 
+  }
 
 } 
 

@@ -1,5 +1,7 @@
 import { useInView } from "react-intersection-observer";
 
+import wizcatPreview from '../images/WizCat_ProjectPreview.png';
+
 function App() { 
   
   const { ref: profileRef, inView: profileInView} = useInView({ threshold: 0.3, triggerOnce: true });  
@@ -92,17 +94,28 @@ function App() {
               <button className="projectBtn">Project</button>
             </div>
 
-            <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>
-              <h3 className="projectHeader">Project #2</h3> 
-              <img src="/logo192.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
-              <p className="projectDescription"> 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
-              </p> 
-              <button className="projectBtn">About</button> 
-              <button className="projectBtn">Project</button>
+            <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.4s" }}>
+              
+                
+              
+              <div className="projectResBox">
+                <h3 className="projectHeader">WizCat Adventures</h3> 
+                <p className="projectDescription"> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
+                </p> 
+                
+                <button className="projectBtn">About</button>  
+                <a className="projectBtn" href="https://allahgold.itch.io/wizcat" target="_blank" rel="noreferrer">Project</a>
+              </div>
+
+              <img className="projectImage" src={wizcatPreview} alt="WizCat Preview"/> 
+              
+
+              
+
             </div> 
 
-            <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>
+            <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.6s" }}>
               <h3 className="projectHeader">Project #3</h3> 
               <img src="/logo192.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
               <p className="projectDescription">
@@ -115,7 +128,7 @@ function App() {
           </section> 
 
           <section className="contactBody" id="contactId" ref={contactRef}>
-            <h1 className={`hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ textAlign: "center", animationDelay: "0.2s" }}>Contact Me</h1> 
+            <h1 className={`hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ textAlign: "center" }}>Contact Me</h1> 
 
             <form className={`contactContent hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>  
               <p>If you have any questions or inquiries regarding my work, please don't hesitate to reach out to me.</p>
