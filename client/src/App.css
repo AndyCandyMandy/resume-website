@@ -57,7 +57,6 @@ body {
   justify-content: center; 
 } 
 
-
 .homeBody {
   background-color: #1b1c1a;
 
@@ -140,7 +139,7 @@ h3 {
   background-color: #ffc400;
   color: white;
   border-radius: 10px; 
-  margin: 0 0 10px 0;  
+  margin: clamp(1rem , 1vw, 2rem); 
 
   display: flex; 
   flex-direction: column;
@@ -149,8 +148,11 @@ h3 {
   gap: 1rem; 
 }   
 
-.projectHeader {
-  margin: 0 0 0 10px;
+.projectHeader { 
+  font-size: clamp(1rem , 10vw, 2rem); 
+  text-align: center;
+  margin: clamp(1rem , 1vw, 2rem);
+
 } 
 
 .projectRespBox {
@@ -158,20 +160,28 @@ h3 {
   flex-direction: column;
   align-items: center; 
   justify-content: center; 
-  gap: 1rem;  
+  margin: clamp(1rem , 1vw, 2rem);  
 } 
 
 .projectImage {
   height: auto;
   width: clamp(20rem, 40vw, 50rem); 
-  margin: 20px auto; 
-  max-width: 100%; 
+  margin: clamp(1rem , 1vw, 2rem);  
+  
   display: block;
 }
 
 .projectDescription {
-  margin: 0 10px 10px 10px; 
-} 
+  margin: clamp(1rem , 1vw, 2rem); 
+}  
+
+.projectBtnBox { 
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center;
+  margin: 0; 
+}
 
 .projectBtn {
   background: #1b1c1a; 
@@ -230,23 +240,40 @@ h3 {
 } 
 
 .contactSubmitBtn {
-  background-color: #121212; 
+  background-color: #ffc400; 
   color: white;  
   font-family: "Roboto", sans-serif;
   font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
   border: 1px solid #ffc400;  
-  padding: 15px;
+  border-radius: 10px;
+  padding: 15px; 
+
 
   cursor: pointer;
+} 
+
+.contactSubmitBtn:hover {
+  background-color: #121212; 
+  color: #ffc400;  
 }
 
 .scrollBtn {
-  background-color: #ffc400;
+  background-color: #121212;
   color: white; 
+  border: none;
+  border-radius: 50%;
+  margin: 5px;
+
   font-family: "Roboto", sans-serif;
-  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  font-size: clamp(2rem, 3vw, 2.75rem);
 
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.scrollBtn:hover {
+  color: #ffc400; 
+  transform: scale(1.1);
 }
 
 .footerSection { 
@@ -257,6 +284,20 @@ h3 {
   display: flex;
   align-items: center; 
   justify-content: center;
+}
+
+.footerBtn {
+  color: white;
+  text-decoration: none;
+  font-size: 50px; 
+  margin: 0 clamp(0.5rem , 0.5vw, 1.5rem); 
+
+  transition: transform 0.2s ease-in-out;
+} 
+
+.footerBtn:hover {
+  color: #ffc400;
+  transform: scale(1.1);
 }
 
 @media (min-width: 768px) {  
@@ -275,11 +316,21 @@ h3 {
 
   .projectContent {
     flex-direction: row;
-  }
+  } 
+
+  .projectHeader { 
+    text-align: left;
+  } 
 
   .projectRespBox {
     flex-direction: row; 
+  } 
+
+  .projectBtnBox {  
+    justify-content: left;
+    margin: clamp(1rem , 1vw, 2rem); 
   }
+
 
 } 
 
@@ -293,7 +344,8 @@ h3 {
   }
 } 
 
-.titleCarousel {
+.titleCarousel { 
+  text-align: center;
   color: white; 
 }
 

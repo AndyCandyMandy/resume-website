@@ -62,7 +62,7 @@ function App() {
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt=""/>  
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt=""/> 
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/couchdb/couchdb-original-wordmark.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg" alt=""/> 
+              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt=""/> 
             </div>  
             <div className="trackCarousel">
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt=""/> 
@@ -75,7 +75,7 @@ function App() {
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt=""/>  
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt=""/> 
               <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/couchdb/couchdb-original-wordmark.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg" alt=""/> 
+              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt=""/> 
             </div> 
             
           </section>
@@ -85,44 +85,57 @@ function App() {
             <h1 className={`hiddenElement ${projectInView ? "fadeIn" : ""}`}>Projects</h1>
 
             <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>
-              <h3 className="projectHeader">Project #1</h3> 
-              <img src="/logo192.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
-              <p className="projectDescription">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
-              </p> 
-              <button className="projectBtn">About</button> 
-              <button className="projectBtn">Project</button>
-            </div>
-
-            <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.4s" }}>
-              
-                
-              
               <div className="projectResBox">
                 <h3 className="projectHeader">WizCat Adventures</h3> 
+
                 <p className="projectDescription"> 
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
                 </p> 
                 
-                <button className="projectBtn">About</button>  
-                <a className="projectBtn" href="https://allahgold.itch.io/wizcat" target="_blank" rel="noreferrer">Project</a>
+                <div className="projectBtnBox"> 
+                  <button className="projectBtn">About</button>  
+                  <a className="projectBtn" href="https://allahgold.itch.io/wizcat" target="_blank" rel="noreferrer">Project</a>
+                </div>
+
               </div>
 
               <img className="projectImage" src={wizcatPreview} alt="WizCat Preview"/> 
-              
+            </div>
 
-              
+            <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.4s" }}>
+              <div className="projectResBox">
+                <h3 className="projectHeader">WizCat Adventures</h3> 
 
+                <p className="projectDescription"> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
+                </p> 
+                
+                <div className="projectBtnBox"> 
+                  <button className="projectBtn">About</button>  
+                  <a className="projectBtn" href="https://allahgold.itch.io/wizcat" target="_blank" rel="noreferrer">Project</a>
+                </div>
+
+              </div>
+
+              <img className="projectImage" src={wizcatPreview} alt="WizCat Preview"/> 
             </div> 
 
             <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.6s" }}>
-              <h3 className="projectHeader">Project #3</h3> 
-              <img src="/logo192.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
-              <p className="projectDescription">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
-              </p> 
-              <button className="projectBtn">About</button> 
-              <button className="projectBtn">Project</button>
+              <div className="projectResBox">
+                <h3 className="projectHeader">WizCat Adventures</h3> 
+
+                <p className="projectDescription"> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
+                </p> 
+                
+                <div className="projectBtnBox"> 
+                  <button className="projectBtn">About</button>  
+                  <a className="projectBtn" href="https://allahgold.itch.io/wizcat" target="_blank" rel="noreferrer">Project</a>
+                </div>
+
+              </div>
+
+              <img className="projectImage" src={wizcatPreview} alt="WizCat Preview"/> 
             </div>
           
           </section> 
@@ -130,7 +143,7 @@ function App() {
           <section className="contactBody" id="contactId" ref={contactRef}>
             <h1 className={`hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ textAlign: "center" }}>Contact Me</h1> 
 
-            <form className={`contactContent hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>  
+            <form className={`contactContent hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s", textAlign: "center" }}>  
               <p>If you have any questions or inquiries regarding my work, please don't hesitate to reach out to me.</p>
               <input className="contactInput" type="text" placeholder="Enter Name"/> 
               <input className="contactInput" type="text" placeholder="Enter Email"/> 
@@ -140,11 +153,11 @@ function App() {
 
           </section>
 
-          <button className="scrollBtn" onClick={scrollTopBtn}>^</button>
+          <button className="scrollBtn" onClick={scrollTopBtn}>	&#9650;</button>
         </main> 
         <footer className="footerSection"> 
-          <i class="devicon-github-original" style={{ fontSize: "50px" }}></i>
-          <i class="devicon-linkedin-plain" style={{ fontSize: "50px" }}></i>
+          <a className="footerBtn devicon-github-original" href="https://github.com/AndyCandyMandy" target="_blank" rel="noreferrer"></a>
+          <a className="footerBtn devicon-linkedin-plain"></a>
 
         </footer>
     </div>
