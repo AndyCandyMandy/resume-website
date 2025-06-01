@@ -169,6 +169,12 @@ h3 {
   margin: clamp(1rem , 1vw, 2rem);  
   
   display: block;
+} 
+
+.projectRoleDescription { 
+  margin: clamp(1rem , 1vw, 2rem);  
+  font-weight: bold;
+  text-align: center;
 }
 
 .projectDescription {
@@ -185,19 +191,26 @@ h3 {
 
 .projectBtn {
   background: #1b1c1a; 
-  border: 1px solid #1b1c1a; 
+  border: 5px solid #1b1c1a; 
   margin: 5px; 
   border-radius: 10px; 
-  cursor: pointer;
+  
 
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
-  text-decoration: none;
+  text-decoration: none; 
+
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .projectBtn:hover { 
-  background: #574610; 
+  background: #2c2e2b; 
+  border: 5px solid #2c2e2b; 
+  color: #ffc400;
+
+  transform: scale(1.1);
 }
 
 .contactContent { 
@@ -248,13 +261,15 @@ h3 {
   border-radius: 10px;
   padding: 15px; 
 
-
+  transition: transform 0.2s ease-in-out;
   cursor: pointer;
 } 
 
 .contactSubmitBtn:hover {
   background-color: #121212; 
   color: #ffc400;  
+
+  transform: scale(1.1);
 }
 
 .scrollBtn {
@@ -321,6 +336,10 @@ h3 {
   .projectHeader { 
     text-align: left;
   } 
+
+  .projectRoleDescription {
+    text-align: left;
+  }
 
   .projectRespBox {
     flex-direction: row; 
