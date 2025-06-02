@@ -1,9 +1,14 @@
 import {Link} from "react-router-dom"
+import Canvas from "../components/canvas.js"
 
 function App() {
   return ( 
     <div>
         <main className="landingBody"> 
+
+          <Canvas>
+            
+          </Canvas>
 
           <div className="landingHeader"> 
             <p>Greetings, I am <span style={{ color: "#ffc400" }}>Andy Giang</span>.</p> 
