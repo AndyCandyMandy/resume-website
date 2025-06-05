@@ -1,16 +1,17 @@
 body {
-  background-color: #1b1c1a;
+  background-color: #1b1c1a;;
 }
 
 /* CSS Elements intented for the landing page */
 .landingBody {
-  background-color: #1b1c1a;
+  background-color: none;
+  height: 100%;
 
   margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
 
 .landingHeader {
@@ -19,7 +20,7 @@ body {
   text-align: center; 
   font-size: clamp(2rem, 4vw, 3rem);
 
-  padding: 25vh 5vw; 
+  padding: 25vh 5vw;  
 } 
 
 .landingBtn {
@@ -33,12 +34,28 @@ body {
   color: #1b1c1a; 
   font-family: "Roboto Condensed", sans-serif; 
   text-decoration: none;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.5rem); 
 }
 
 .landingBtn:hover {
   background-color: #574610; 
-} 
+}  
+
+.landingCanvas {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  border: 1px solid red; 
+
+  margin: 0px;
+  padding: 0; 
+  display: block; 
+  z-index: -1;
+}
+
+.landingBody .landingCanvas, #overlay {
+  position: absolute;
+}
 
 /* CSS Elements intented for the home page ------------------------------------------------------------------------*/
 .headerSection {

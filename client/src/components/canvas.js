@@ -4,31 +4,26 @@ const Canvas = props => {
 
     const canvasRef = useRef(null);
 
-    const draw = (ctx, frameCount) => {
+    const draw = (ctx) => { 
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
         ctx.fillStyle = "black";
-        ctx.beginPath(); 
-
-
-        ctx.arc(50, 100, 20*Math.sin(frameCount*0.05)**2, 0, 2*Math.PI);
+        ctx.rect(ctx.canvas.width/2, ctx.canvas.height/2, 50, 50);
         ctx.fill();
     }
 
     useEffect(() => {
         const canvas = canvasRef.current;
         const context = canvas.getContext("2d"); 
-        let frameCount = 0; 
-        let animationFrameId; 
 
-        const render = () => {
-            frameCount++;
-            draw(context, frameCount); 
-            animationFrameId = window.requestAnimationFrame(render);
-        } 
-        render()
+        const resizeCanvas = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            draw(context)
+        };
+        window.addEventListener("resize", resizeCanvas);
 
-
-
+        resizeCanvas();
         draw(context);
     }, [draw])
 

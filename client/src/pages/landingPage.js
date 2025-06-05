@@ -6,17 +6,15 @@ function App() {
     <div>
         <main className="landingBody"> 
 
-          <Canvas>
-            
-          </Canvas>
+          {/* <Canvas className="landingCanvas"></Canvas> */}
 
           <div className="landingHeader"> 
+
             <p>Greetings, I am <span style={{ color: "#ffc400" }}>Andy Giang</span>.</p> 
             <p>Welcome to my website!</p>
             <button className="landingBtn">Resume</button> 
             <Link className="landingBtn" to="/homePage">Home Page</Link>
 
-            
           </div>
 
         </main>
