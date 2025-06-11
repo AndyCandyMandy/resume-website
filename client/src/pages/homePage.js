@@ -1,7 +1,8 @@
 import { useInView } from "react-intersection-observer";
 
 import wizcatPreview from '../images/WizCat_ProjectPreview.png'; 
-import warptrialPreview from '../images/WarpTrial_ProjectPreview.png';
+import warptrialPreview from '../images/WarpTrial_ProjectPreview.png'; 
+import rmwPreview from '../images/RMW_ProjectPreview.png';
 
 function App() { 
   
@@ -122,20 +123,20 @@ function App() {
 
             <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.6s" }}>
               <div className="projectResBox">
-                <h3 className="projectHeader">Project #3</h3> 
+                <h3 className="projectHeader">Resturant Maintainable Website</h3> 
                 <p className="projectRoleDescription">Fullstack Developer</p>
                 <p className="projectDescription"> 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
+                  A full-stack web development project built using React for the frontend, Node.js for the backend, and MySQL as the database. The primary goal of this website is to enable restaurant owners to independently manage and update content, such as menu items, prices, announcements, operating hours, etc., reducing their overall reliance on developers for small but important changes to their webpage. Combines an appealing, user-friendly design with well-organized and extensible code to simplify future maintenance and updates if required by the developer.
                 </p> 
                 
                 <div className="projectBtnBox"> 
                   <button className="projectBtn">About</button>  
-                  <a className="projectBtn" href="https://allahgold.itch.io/wizcat" target="_blank" rel="noreferrer">Project</a>
+                  <a className="projectBtn" href="https://github.com/AndyCandyMandy/restaurant-maintainable-website" target="_blank" rel="noreferrer">Project</a>
                 </div>
 
               </div>
 
-              <img className="projectImage" src={wizcatPreview} alt="WizCat Preview"/> 
+              <img className="projectImage" src={rmwPreview} alt="WizCat Preview"/> 
             </div>
           
           </section> 
