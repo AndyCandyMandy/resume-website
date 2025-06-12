@@ -1,5 +1,7 @@
 import { useInView } from "react-intersection-observer";
 
+import Carousel from "../components/animatedCarousel/carousel.js";
+
 import wizcatPreview from '../images/WizCat_ProjectPreview.png'; 
 import warptrialPreview from '../images/WarpTrial_ProjectPreview.png'; 
 import rmwPreview from '../images/RMW_ProjectPreview.png';
@@ -40,47 +42,21 @@ function App() {
 
 
           <section className="profileBody" id="profileId" ref={profileRef}>
-            <h1 className={`hiddenElement ${profileInView ? "fadeIn" : ""}`}>Who is <span style={{ color: "#ffc400" }}>Andy Giang</span>?</h1>
+            <h1 className={`hiddenElement ${profileInView ? "fadeIn" : ""}`}>Who is <span style={{ color: "#0090d3" }}>Andy Giang</span>?</h1>
             <div className={`profileContent hiddenElement ${profileInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>
               <img src="/logo512.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida aliquam leo quis porta. Sed elementum dolor ac lorem scelerisque, vel vulputate dui consequat. Pellentesque ut enim id tellus luctus gravida eget a tellus. Morbi hendrerit consequat velit, at scelerisque erat sodales sit amet. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh enim, mollis id sem a, viverra mollis nisi. Ut porttitor erat ac magna fringilla luctus.
+                As an individual, I highly value the idea that people should always strive to improve themselves through lifelong learning. Through my role as a full-stack developer, I enjoy pushing the boundaries of my knowledge and capabilities when it comes to web development to create efficient but also visually appealing web applications. I incorporate my technical expertise as a programmer to create functional but maintainable backends while leveraging my creativity and eye for detail to create visually intuitive and interactable frontends.
               </p>
             </div> 
           </section>
 
           
-          <h3 className={`titleCarousel hiddenElement ${profileInView ? "fadeIn" : ""}`}>My tools and languages for web development!</h3>
-          <section className={`displayCarousel hiddenElement ${profileInView ? "fadeIn" : ""}`}> 
-            
-            <div className="trackCarousel">
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt=""/>  
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt=""/>
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt=""/>  
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/couchdb/couchdb-original-wordmark.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt=""/> 
-            </div>  
-            <div className="trackCarousel">
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt=""/>  
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt=""/>
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt=""/>  
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/couchdb/couchdb-original-wordmark.svg" alt=""/> 
-              <img className="logoCarousel" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt=""/> 
-            </div> 
-            
-          </section>
+          <h3 className={`titleCarousel hiddenElement ${profileInView ? "fadeIn" : ""}`}>My tools and languages for web development!</h3> 
+          <div className={`hiddenElement ${profileInView ? "fadeIn" : ""}`}>
+            <Carousel ></Carousel>
+          </div>
+          
           
 
           <section className="projectBody" id="projectId" ref={projectRef}>
@@ -95,7 +71,7 @@ function App() {
                 </p> 
                 
                 <div className="projectBtnBox"> 
-                  <a className="projectBtn" href="https://github.com/cmpt306team12/CMPT306-WizCat" target="_blank" rel="noreferrer">About</a> 
+                  <a className="projectBtn" href="https://github.com/cmpt306team12/CMPT306-WizCat" target="_blank" rel="noreferrer">GitHub</a> 
                   <a className="projectBtn" href="https://allahgold.itch.io/wizcat" target="_blank" rel="noreferrer">Project</a>
                 </div>
 
@@ -113,7 +89,7 @@ function App() {
                 </p> 
                 
                 <div className="projectBtnBox"> 
-                  <a className="projectBtn" href="https://github.com/AndyCandyMandy/warp-trials-mouse-to-target-research-program" target="_blank" rel="noreferrer">About</a>
+                  <a className="projectBtn" href="https://github.com/AndyCandyMandy/warp-trials-mouse-to-target-research-program" target="_blank" rel="noreferrer">GitHub</a>
                 </div>
 
               </div>
@@ -130,35 +106,32 @@ function App() {
                 </p> 
                 
                 <div className="projectBtnBox"> 
-                  <button className="projectBtn">About</button>  
-                  <a className="projectBtn" href="https://github.com/AndyCandyMandy/restaurant-maintainable-website" target="_blank" rel="noreferrer">Project</a>
+                  <a className="projectBtn" href="https://github.com/AndyCandyMandy/restaurant-maintainable-website" target="_blank" rel="noreferrer">GitHub</a>
                 </div>
 
               </div>
 
-              <img className="projectImage" src={rmwPreview} alt="WizCat Preview"/> 
+              <img className="projectImage" src={rmwPreview} alt="RMW Preview"/> 
             </div>
           
           </section> 
 
+
           <section className="contactBody" id="contactId" ref={contactRef}>
             <h1 className={`hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ textAlign: "center" }}>Contact Me</h1> 
 
-            <form className={`contactContent hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s", textAlign: "center" }}>  
+            <div className={`contactContent hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s", textAlign: "center" }}>  
               <p>If you have any questions or inquiries regarding my work, please don't hesitate to reach out to me.</p>
-              <input className="contactInput" type="text" placeholder="Enter Name"/> 
-              <input className="contactInput" type="text" placeholder="Enter Email"/> 
-              <textarea className="contactMessage" type="text" placeholder="Enter Message"/> 
-              <button className="contactSubmitBtn" type="submit">Submit</button>
-            </form>
-
+              <a className="contactSubmitBtn" href="mailto:andygiang102@gmail.com">Email</a>
+              <a className="footerBtn devicon-linkedin-plain" href="https://www.linkedin.com/in/andy-giang-5571792aa/" target="_blank" rel="noreferrer"></a>
+            </div>
           </section>
 
-          <button className="scrollBtn" onClick={scrollTopBtn}>	&#9650;</button>
+
         </main> 
         <footer className="footerSection"> 
           <a className="footerBtn devicon-github-original" href="https://github.com/AndyCandyMandy" target="_blank" rel="noreferrer"></a>
-          <a className="footerBtn devicon-linkedin-plain" href="https://github.com/AndyCandyMandy" target="_blank" rel="noreferrer"></a>
+          
 
         </footer>
     </div>

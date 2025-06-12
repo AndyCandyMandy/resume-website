@@ -1,0 +1,35 @@
+@keyframes leftSlide {
+  0% {
+    transform: translateX(0);
+  } 
+  100% {
+    transform: translateX(-100%);
+  }
+} 
+
+.titleCarousel { 
+  text-align: center;
+  color: white; 
+}
+
+.displayCarousel {
+  width: 60vw;
+  padding: 1rem 0;
+
+  white-space: nowrap; 
+  overflow-x: hidden; 
+}
+
+.trackCarousel { 
+  display: inline-block;
+  gap: 1rem;
+
+  animation: leftSlide 10s linear infinite;
+} 
+
+.logoCarousel {
+  width: clamp(90px, 7vw, 30px); 
+  height: auto;  
+  
+  margin: 5px;
+}  
