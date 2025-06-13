@@ -121,17 +121,28 @@ function App() {
             <h1 className={`hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ textAlign: "center" }}>Contact Me</h1> 
 
             <div className={`contactContent hiddenElement ${contactInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s", textAlign: "center" }}>  
-              <p>If you have any questions or inquiries regarding my work, please don't hesitate to reach out to me.</p>
-              <a className="contactSubmitBtn" href="mailto:andygiang102@gmail.com">Email</a>
-              <a className="footerBtn devicon-linkedin-plain" href="https://www.linkedin.com/in/andy-giang-5571792aa/" target="_blank" rel="noreferrer"></a>
+              <p>
+                If you have any questions or inquiries regarding my work, please don't hesitate to reach out to me through email or Linkdin.
+                Please feel free to explore my projects on my public GitHub profile.
+              </p>
+              <a className="contactBtn" href="mailto:andygiang102@gmail.com">Email</a>
+              
             </div>
           </section>
 
 
         </main> 
         <footer className="footerSection"> 
-          <a className="footerBtn devicon-github-original" href="https://github.com/AndyCandyMandy" target="_blank" rel="noreferrer"></a>
-          
+
+          <a className="footerBtn" href="https://github.com/AndyCandyMandy" target="_blank" rel="noreferrer">
+            <span className="devicon-github-original"/>
+            <span style={{margin:"0", marginLeft:"1rem"}}>GitHub</span>
+          </a> 
+
+          <a className="footerBtn" href="https://www.linkedin.com/in/andy-giang-5571792aa/" target="_blank" rel="noreferrer">
+            <span className="devicon-linkedin-plain"/>
+            <span style={{margin:"0", marginLeft:"1rem"}}>Linkedin</span>
+          </a>
 
         </footer>
     </div>
