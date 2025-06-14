@@ -11,8 +11,9 @@ function App() {
           <div className="landingHeader"> 
 
             <p>Greetings, I am <span style={{ color: "#0090d3" }}>Andy Giang</span>.</p> 
-            <p>Welcome to my website!</p>
-            <button className="landingBtn">Resume</button> 
+            <p>Welcome to my website!</p> 
+            
+            <a className="landingBtn" href="/assets/AndyGiang_Online_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             <Link className="landingBtn" to="/homePage">Home Page</Link>
 
           </div>

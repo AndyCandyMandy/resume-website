@@ -43,8 +43,8 @@ function App() {
 
           <section className="profileBody" id="profileId" ref={profileRef}>
             <h1 className={`hiddenElement ${profileInView ? "fadeIn" : ""}`}>Who is <span style={{ color: "#0090d3" }}>Andy Giang</span>?</h1>
-            <div className={`profileContent hiddenElement ${profileInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>
-              <img src="/logo512.png" alt="Logo" style={{ maxWidth: "100%", height: "auto" }}/>
+            <div className={`profileContent hiddenElement ${profileInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}> 
+
               <p>
                 As an individual, I highly value the idea that people should always strive to improve themselves through lifelong learning. Through my role as a full-stack developer, I enjoy pushing the boundaries of my knowledge and capabilities when it comes to web development to create efficient but also visually appealing web applications. I incorporate my technical expertise as a programmer to create functional but maintainable backends while leveraging my creativity and eye for detail to create visually intuitive and interactable frontends.
               </p>
@@ -125,7 +125,9 @@ function App() {
                 If you have any questions or inquiries regarding my work, please don't hesitate to reach out to me through email or Linkdin.
                 Please feel free to explore my projects on my public GitHub profile.
               </p>
-              <a className="contactBtn" href="mailto:andygiang102@gmail.com">Email</a>
+
+              <a className="contactBtn" href="mailto:andygiang102@gmail.com">Email</a> 
+              <a className="contactBtn" href="/assets/AndyGiang_Online_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
               
             </div>
           </section>

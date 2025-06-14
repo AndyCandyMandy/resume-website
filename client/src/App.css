@@ -131,14 +131,16 @@ h3 {
    font-size: clamp(1.5rem, 2vw, 2.25rem); 
 }
 
-.profileContent {
+.profileContent { 
+  text-align: center;
   gap: 1rem;  
+  margin: 0 2rem 0;
 
   display: flex; 
   flex-direction: column;
   align-items: center; 
   justify-content: center; 
-}
+} 
 
 .projectContent { 
   background-color: #006a9b;
@@ -259,6 +261,8 @@ h3 {
   padding: 15px; 
   text-decoration: none;
 
+  margin: 0.5rem;
+
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
 } 
@@ -280,11 +284,11 @@ h3 {
   justify-content: center;
 }
 
-.footerBtn { 
+.footerBtn {  
   color: white; 
   border-bottom: 2.5px solid #0090d3;
   text-decoration: none;
-  font-size: 30px;   
+  font-size: clamp(10px, 10vw, 25px);   
   font-family: "Roboto Condensed", sans-serif; 
   padding: 5px;
   margin: 0 1rem 0;
@@ -316,7 +320,9 @@ h3 {
     justify-content: flex-end;
   }
 
-  .profileContent {
+  .profileContent {  
+    margin: 0 4rem 0;
+    text-align: left;
     flex-direction: row; 
   }  
 
