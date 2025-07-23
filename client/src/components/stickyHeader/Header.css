@@ -1,4 +1,4 @@
-.headerBody { 
+.headerSection { 
     width: 100%;
     height: clamp(2.25rem, 10vh, 4rem); 
     z-index: 999;
@@ -13,3 +13,59 @@
     align-items: center;
     justify-content: space-between; 
 }   
+
+.headerHamburgerBtn { 
+    display: none;
+    color: white; 
+
+    margin: 1rem;
+} 
+
+.headerHamburgerBtn:hover {
+    color: #00aeff; 
+
+    cursor: pointer;
+}
+
+.headerBtnBox {
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: center; 
+} 
+
+.headerBtn { 
+    margin: 1rem;
+
+    color: white; 
+    font-family: "Roboto", sans-serif;
+    font-size: clamp(1.25rem, 2vw, 1.5rem); 
+} 
+
+.headerBtn:hover {
+    color: #00aeff; 
+
+    cursor: pointer; 
+}  
+
+@media (max-width: 768px) { 
+    .headerHamburgerBtn {
+        display: block;
+    }
+
+    .headerBtnBox { 
+        position: fixed;
+        top: -100%; 
+        width: 100vw;
+
+        background-color: #121212;
+        flex-direction: column;
+
+        text-align: center;
+        transition: 0.5s;
+    }  
+
+    .headerBtnBox.active { 
+        top: clamp(2.25rem, 10vh, 4rem); 
+    }
+}

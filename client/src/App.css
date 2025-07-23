@@ -2,7 +2,29 @@ body {
   background-color: #1b1c1a;;
 }
 
-/* CSS Elements intented for the landing page */
+.btnType1 { 
+  background-color: #0090d3; 
+  border-radius: 10px;
+  padding: 15px; 
+  margin: 1px;
+
+  color: #1b1c1a; 
+  font-family: "Roboto Condensed", sans-serif; 
+  text-decoration: none;
+  font-size: clamp(1rem, 2vw, 1.5rem);  
+
+  transition: transform 0.2s ease-in-out;
+} 
+
+.btnType1:hover {
+  background-color: #00aeff;  
+
+  cursor: pointer;
+
+  transform: scale(1.1);
+}  
+
+/* CSS Elements intented for the landing section */
 .landingBody {
   background-color: none;
   height: 100%;
@@ -14,53 +36,18 @@ body {
   align-items: center; 
 }
 
-.landingHeader {
+.landingContent {
   color: white;
   font-family: "Roboto Condensed", sans-serif;
   text-align: center; 
-  font-size: clamp(2rem, 4vw, 3rem);
-
-  padding: 25vh 5vw;  
+  font-size: clamp(2rem, 4vw, 3rem); 
 } 
-
-.landingBtn {
-  background-color: #0090d3; 
-  border: 1px solid #1b1c1a; 
-  margin: 10px;
-  padding: 15px; 
-  border-radius: 10px; 
-  cursor: pointer;
-
-  color: #1b1c1a; 
-  font-family: "Roboto Condensed", sans-serif; 
-  text-decoration: none;
-  font-size: clamp(1rem, 2vw, 1.5rem); 
-}
-
-.landingBtn:hover {
-  background-color: #0090d3; 
-}  
 
 .landingBody .landingCanvas, #overlay {
   position: absolute;
 }
 
 /* CSS Elements intented for the home page ------------------------------------------------------------------------*/
-.headerSection { 
-  width: 100%; 
-  height: clamp(2.25rem, 10vh, 4rem); 
-  top: 0;
-  left: 0;
-  position: fixed; 
-  z-index: 1000;
-  
-  background-color: #121212;
-  color: white;
-
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-} 
 
 .homeBody {
   background-color: #1b1c1a;
@@ -73,19 +60,6 @@ body {
   align-items: center;
   justify-content: center; 
 }
-
-.headerBtn {
-  color: white; 
-  font-family: "Roboto", sans-serif;
-  padding: 0 20px;
-  font-size: clamp(1.25rem, 2vw, 1.5rem); 
-  cursor: pointer; 
-} 
-
-.headerBtn:hover {
-  color: #0090d3;
-} 
-
 
 .profileBody, .projectBody, .contactBody {
   color: white;

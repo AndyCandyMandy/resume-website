@@ -1,3 +1,4 @@
+//import Canvas from "../components/canvas.js"; 
 
 import Header from "../components/stickyHeader/Header.js"; 
 import Profile from "../components/profileSection/ProfileSection.js"; 
@@ -9,22 +10,20 @@ function App() {
 
   return ( 
     <div>  
-        <div>
-          <main className="landingBody"> 
+        <section className="landingBody">
+        
+          {/*<Canvas className="landingCanvas"></Canvas>*/}
 
-            {/* <Canvas className="landingCanvas"></Canvas> */}
+          <div className="landingContent"> 
 
-            <div className="landingHeader"> 
+            <p>Greetings, I am <span style={{ color: "#0090d3" }}>Andy Giang</span>.</p> 
+            <p>Welcome to my website!</p> 
+            
+            <a className="btnType1" href="/assets/AndyGiang_Online_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
 
-              <p>Greetings, I am <span style={{ color: "#0090d3" }}>Andy Giang</span>.</p> 
-              <p>Welcome to my website!</p> 
-              
-              <a className="landingBtn" href="/assets/AndyGiang_Online_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          </div>
 
-            </div>
-
-          </main>
-        </div>
+        </section>
 
         <Header></Header>
         
