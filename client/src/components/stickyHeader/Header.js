@@ -5,10 +5,14 @@ import "./Header.css";
 function Header() {
   return ( 
     <header className="headerBody" id="headerId"> 
+      <p>Title</p>
+
+      <div>
         <p className="headerBtn" onClick={() => scrollTopBtn()}>Home</p>
         <p className="headerBtn" onClick={() => scrollSectionBtn("profileId")}>Profile</p>
         <p className="headerBtn" onClick={() => scrollSectionBtn("projectId")}>Projects</p> 
-        <p className="headerBtn" onClick={() => scrollSectionBtn("contactId")}>Contacts</p>     
+        <p className="headerBtn" onClick={() => scrollSectionBtn("contactId")}>Contacts</p> 
+      </div>    
     </header>
   );
 }

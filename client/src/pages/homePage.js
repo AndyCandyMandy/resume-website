@@ -1,7 +1,6 @@
 
 import Header from "../components/stickyHeader/Header.js"; 
 import Profile from "../components/profileSection/ProfileSection.js"; 
-import Carousel from "../components/animatedCarousel/Carousel.js"; 
 import Projects from "../components/projectSection/ProjectSection.js"; 
 import Contacts from "../components/contactSection/ContactSection.js"; 
 
@@ -33,11 +32,6 @@ function App() {
 
           <Profile></Profile>
 
-          <h3 className={`titleCarousel hiddenElement ${profileInView ? "fadeIn" : ""}`}>My tools and languages for web development!</h3> 
-          <div className={`hiddenElement ${profileInView ? "fadeIn" : ""}`}>
-            <Carousel ></Carousel>
-          </div>
-          
           <Projects></Projects>
 
           <Contacts></Contacts>
