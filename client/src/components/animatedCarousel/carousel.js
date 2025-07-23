@@ -1,4 +1,4 @@
-import "./carousel.css"; 
+import "./Carousel.css"; 
 
 function Carousel() {
   return ( 

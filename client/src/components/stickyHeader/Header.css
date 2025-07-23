@@ -1,0 +1,15 @@
+.headerBody { 
+    width: 100%;
+    height: clamp(2.25rem, 10vh, 4rem); 
+    z-index: 999;
+    background-color: #121212;
+    color: white;
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: space-between; 
+}   

@@ -5,15 +5,13 @@ import {
   Route,
 } from "react-router-dom";
 
-import Landing from "./pages/landingPage"; 
 import Home from "./pages/homePage";
 
 function App() {
   return (
     <Router> 
       <Routes> 
-        <Route exact path="/" element={<Landing />} /> 
-        <Route exact path="/homePage" element={<Home/>} /> 
+        <Route exact path="/" element={<Home/>} /> 
       </Routes>
     </Router>
   );
