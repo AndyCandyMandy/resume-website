@@ -1,0 +1,22 @@
+.projectBody {
+    color: white; 
+
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center;
+} 
+
+.projectMainHeader { 
+    width: 100%; 
+
+    text-align: center; 
+    font-family: "Roboto Condensed", sans-serif; 
+    font-size: clamp(1rem, 5vw, 2rem);
+}  
+
+@media (max-width: 768px) {  
+    .projectMainHeader {  
+        text-align: center; 
+    } 
+}

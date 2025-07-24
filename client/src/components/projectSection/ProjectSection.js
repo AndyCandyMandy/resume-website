@@ -1,5 +1,7 @@
 import { useInView } from "react-intersection-observer";
 
+import "./ProjectSection.css";
+
 import wizcatPreview from '../../images/WizCat_ProjectPreview.png'; 
 import warptrialPreview from '../../images/WarpTrial_ProjectPreview.png'; 
 import rmwPreview from '../../images/RMW_ProjectPreview.png';
@@ -8,8 +10,11 @@ function ProjectSection() {
     const { ref: projectRef, inView: projectInView} = useInView({ threshold: 0.3, triggerOnce: true }); 
 
     return ( 
-        <section className="projectBody" id="projectId" ref={projectRef}>
-            <h1 className={`hiddenElement ${projectInView ? "fadeIn" : ""}`}>Projects</h1>
+        <section className="projectBody" id="projectId" ref={projectRef}> 
+            <div className="projectMainHeader">
+                <h1 className={`hiddenElement ${projectInView ? "fadeIn" : ""}`}>Projects</h1>
+            </div>
+            
 
             <div className={`projectContent hiddenElement ${projectInView ? "fadeIn" : ""}`} style={{ animationDelay: "0.2s" }}>
                 <div className="projectResBox">
