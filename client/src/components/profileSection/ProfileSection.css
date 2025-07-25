@@ -1,4 +1,6 @@
-.profileBody { 
+.profileBody {  
+    margin: 0 0 2rem;
+
     color: white;
 
     display: flex;

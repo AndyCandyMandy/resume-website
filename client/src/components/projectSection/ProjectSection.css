@@ -1,4 +1,5 @@
-.projectBody {
+.projectBody { 
+    margin: 0 0 2rem;
     color: white; 
 
     display: flex;
@@ -15,8 +16,128 @@
     font-size: clamp(1rem, 5vw, 2rem);
 }  
 
-@media (max-width: 768px) {  
+.projectContent {
+    background-color: #006a9b; 
+    border-radius: 10px;  
+
+    margin: 0 5rem 1rem; 
+
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center; 
+} 
+
+.projectTextBox { 
+    margin: 1rem;
+
+    font-family: "Roboto", sans-serif;
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;  
+} 
+
+.projectContentHeader { 
+    width: 100%; 
+    margin: 0 0 2rem 0;
+
+    font-family: "Roboto Condensed", sans-serif; 
+    font-size: clamp(1rem , 10vw, 2rem); 
+
+    text-align: left; 
+}
+
+.projectContentRole { 
+    width: 100%; 
+    margin: 0 0 1rem 0;
+
+    font-weight: bold;
+    text-align: left;
+}
+
+.projectContentDesc {
+    width: 100%; 
+    margin: 0 0 0 0;
+
+    text-align: left;
+}
+
+.projectBtnBox { 
+    width: 100%;
+    margin: 1rem 0 0 0;
+
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+    justify-content: left;
+} 
+
+.projectBtn {
+    background: #1b1c1a; 
+    border: 5px solid #1b1c1a; 
+    margin: 5px; 
+    border-radius: 10px; 
+    
+
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
+    text-decoration: none; 
+
+    transition: transform 0.2s ease-in-out;
+} 
+
+.projectBtn:hover { 
+    background: #2c2e2b; 
+    border: 5px solid #2c2e2b;  
+
+    color: #0090d3;
+
+    cursor: pointer;
+
+    transform: scale(1.1);
+}  
+
+.projectImage {
+    height: auto;
+    width: clamp(20rem, 40vw, 50rem); 
+    margin: 1rem;  
+    
+    display: block;
+}
+
+@media (max-width: 1024px) {  
     .projectMainHeader {  
         text-align: center; 
     } 
-}
+
+    .projectContent { 
+        margin: 0 2rem 1rem; 
+        flex-direction: column;
+    } 
+
+    .projectContentHeader {
+        text-align: center; 
+    } 
+
+    .projectContentRole { 
+        text-align: center;
+    } 
+
+    .projectContentDesc {
+        text-align: center;
+    } 
+
+    .projectBtnBox {
+        justify-content: center;
+    } 
+
+    .projectImage {
+        height: auto;
+        width: 100%; 
+        margin: 0 0 1rem;  
+    }
+} 

@@ -24,7 +24,8 @@ body {
   transform: scale(1.1);
 }  
 
-/* CSS Elements intented for the landing section */
+/* CSS Elements intented for the landing section ------------------------------------------------------------------------*/
+
 .landingBody {
   background-color: none;
   height: 100%;
@@ -60,12 +61,6 @@ body {
   justify-content: center; 
 }
 
-.contactBody {
-  color: white;
-  overflow: hidden;
-  padding: 0 5rem;
-} 
-
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -92,146 +87,7 @@ h3 {
    font-size: clamp(1.5rem, 2vw, 2.25rem); 
 }
 
-
-
-
-
-
-
-
-
-
-.projectContent { 
-  background-color: #006a9b;
-  color: white;
-  border-radius: 10px; 
-  margin: 2.5rem clamp(1rem , 1vw, 2rem) 2.5rem; 
-  gap: 1rem; 
-
-  display: flex; 
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-}   
-
-.projectHeader { 
-  font-size: clamp(1rem , 10vw, 2rem); 
-  text-align: center;
-  margin: clamp(1rem , 1vw, 2rem);
-} 
-
-.projectRespBox {
-  display: flex; 
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  margin: clamp(1rem , 1vw, 2rem);  
-} 
-
-.projectImage {
-  height: auto;
-  width: clamp(20rem, 40vw, 50rem); 
-  margin: clamp(1rem , 1vw, 2rem);  
-  
-  display: block;
-} 
-
-.projectRoleDescription { 
-  margin: clamp(1rem , 1vw, 2rem);  
-  font-weight: bold;
-  text-align: center;
-}
-
-.projectDescription {
-  margin: clamp(1rem , 1vw, 2rem); 
-}  
-
-.projectBtnBox { 
-  display: flex; 
-  flex-direction: row;
-  align-items: center; 
-  justify-content: center;
-  margin: 0; 
-}
-
-.projectBtn {
-  background: #1b1c1a; 
-  border: 5px solid #1b1c1a; 
-  margin: 5px; 
-  border-radius: 10px; 
-  
-
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
-  text-decoration: none; 
-
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-.projectBtn:hover { 
-  background: #2c2e2b; 
-  border: 5px solid #2c2e2b; 
-  color: #0090d3;
-
-  transform: scale(1.1);
-} 
-
-.contactBody { 
-  width: clamp(40vw, 55vw, 80vw);
-
-  background-color: #121212; 
-  border-radius: 10px;
-
-  margin: 1rem 0 1rem;
-}
-
-.contactContent { 
-  margin: 0 0 20px 0;
-
-  display: flex;
-  flex-direction: column;  
-  align-items: center;
-  justify-content: center; 
-} 
-
-.contactInput {
-  background-color: #2c2e2b; 
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1.25rem, 1.5vw, 1.25rem); 
-  width: clamp(30vw, 45vw, 60vw);
-
-  border: 1px solid #1b1c1a; 
-  caret-color: #0090d3; 
-  outline-color: none;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-}
-
-.contactBtn {
-  background-color: #0090d3; 
-  color: white;  
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1.25rem, 1.5vw, 1.5rem); 
-  border: 1px solid #0090d3;  
-  border-radius: 10px;
-  padding: 15px; 
-  text-decoration: none;
-
-  margin: 0.5rem;
-
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
-} 
-
-.contactBtn:hover {
-  background-color: #121212; 
-  color: #0090d3;  
-
-  transform: scale(1.1);
-}
+/* CSS Elements intented for the footer ------------------------------------------------------------------------*/
 
 .footerSection { 
   background-color: #121212;
@@ -268,43 +124,3 @@ h3 {
   transform: scale(1.1);
 } 
 
-
-@media (min-width: 768px) {  
-
-  .profileBody h1 {
-    text-align: start;
-  }
-
-  .headerSection {
-    justify-content: flex-end;
-  }
-
-  .profileContent {  
-    margin: 0 4rem 0;
-    text-align: left;
-    flex-direction: row; 
-  }  
-
-  .projectContent {
-    flex-direction: row;
-  } 
-
-  .projectHeader { 
-    text-align: left;
-  } 
-
-  .projectRoleDescription {
-    text-align: left;
-  }
-
-  .projectRespBox {
-    flex-direction: row; 
-  } 
-
-  .projectBtnBox {  
-    justify-content: left;
-    margin: clamp(1rem , 1vw, 2rem); 
-  }
-
-
-} 
