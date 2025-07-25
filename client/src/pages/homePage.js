@@ -16,11 +16,10 @@ function App() {
 
           <div className="landingContent"> 
 
-            <p>Greetings, I am <span style={{ color: "#0090d3" }}>Andy Giang</span>.</p> 
-            <p>Welcome to my website!</p> 
+            <p className="landingText">Greetings, I am <span style={{ color: "#0090d3" }}>Andy Giang</span>.</p> 
+            <p className="landingText" style={{ marginBottom:"2rem" }}>Welcome to my website!</p> 
             
             <a className="btnType1" href="/assets/AndyGiang_Online_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-
           </div>
 
         </section>

@@ -49,7 +49,7 @@ function Header() {
 
   return ( 
     <header className="headerSection" id="headerId"> 
-      <h3>Andy Giang</h3>
+      <h3 className="headerTitle">Andy Giang</h3>
 
       <div className={`headerBtnBox ${isHeaderContentOpen ? "active" : ""}`}>
         <p className="headerBtn" onClick={() => {scrollTopBtn(); turnOffHamburger()}}>Home</p>
