@@ -38,7 +38,7 @@ function Header() {
           scrollSectionBtn("profileId");
       } 
       else {
-          setIsHeaderContentOpen(prev => !prev);
+          setIsHeaderContentOpen(prev => !prev); 
       }
   }; 
 
@@ -58,7 +58,11 @@ function Header() {
         <p className="headerBtn" onClick={() => {scrollSectionBtn("contactId"); turnOffHamburger()}}>Contacts</p> 
       </div>  
 
-      <button className="headerHamburgerBtn" onClick={toggleHamburger}>Header</button>   
+      <div className={`headerHamburgerBtn ${isHeaderContentOpen ? "toggleBurger" : ""}`} onClick={toggleHamburger}> 
+        <div className="bar1"></div> 
+        <div className="bar2"></div> 
+        <div className="bar3"></div>
+      </div>   
     </header>
   );
 }
